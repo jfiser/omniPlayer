@@ -1,0 +1,115 @@
+<html>
+<head>
+
+<title>ngPlayer</title>
+
+<script type="text/javascript" src="swfobject2.js"></script>
+<style  type="text/css">
+#containingBlock {
+	width: 50%;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0px;
+}
+
+object,
+embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+</style>
+
+
+</head>
+<body>
+
+
+<div id="containingBlock">
+    <div class="videoWrapper">
+	<div id=ngPlayer></div>
+    </div>
+<div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+//DDM.video.player.adStart
+var DDM = new Object();
+DDM.video = new Object();
+DDM.video.player = new Object();
+
+DDM.video.player.adStart = function(refId){
+	alert("adStart: " + refId);
+};
+DDM.video.player.adEnded = function(refId){
+	alert("adEnded: " + refId);
+};
+DDM.video.player.clipStart = function(refId){
+	alert("clipStart: " + refId);
+};
+DDM.video.player.clipEnded = function(refId){
+	alert("clipEnded: " + refId);
+};
+DDM.video.player.loadStart = function(refId){
+	alert("loadStart: " + refId);
+};
+DDM.video.player.paused = function(refId){
+	alert("paused: " + refId);
+};
+DDM.video.player.playing = function(refId){
+	alert("playing: " + refId);
+};
+DDM.video.player.seeked = function(refId, time){
+	alert("seeked: " + refId + " : " + time);
+};
+DDM.video.player.seeking = function(refId){
+	alert("seeking: " + refId);
+};
+
+var videoJson = 
+{
+    "byline_override":"",
+    "id":172,
+    "meta_description":"",
+    "mp4_url":"http://ngs-vh.akamaihd.net/z/NG_Magazine/610/183/NGM-David-Doubilet-FINAL_ipad-840.mp4",
+    "playlist_url":"http://link.theplatform.com/s/ngs/j6WKWNJZPOVN?mbr=true&feed=all-ng-magazine",
+    "poly_url":"/videos/ngm-david-doubilet/",
+    "primary_photo":"http://ngm-qa-media.nationalgeographic.com/media/uploads/photos/content/video/2013/09/05/NGM-David-Doubilet.jpg",
+    "resource_uri":"/api/v1/video/172/",
+    "slug":"ngm-david-doubilet",
+    "source":"",
+    "title":"NGM-David-Doubilet"
+};
+var _videoJson =  encodeURIComponent(JSON.stringify(videoJson));
+
+soVariables = {
+		_player_w: 998,
+		_videoJson: encodeURIComponent(JSON.stringify(videoJson))
+	    },
+soParameters = {
+		//wmode: "opaque", 
+		allowScriptAccess: "always", 
+		allowFullScreen: "true", 
+		bgcolor: 0x000000},
+soAttributes = {id: "ngPlayer", name: "ngPlayer"};
+
+swfobject.embedSWF("./ngPlayer.swf", "ngPlayer", "100%", "100%", "10.0", "expressInstall.swf", soVariables, soParameters, soAttributes);
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+<smil xmlns="http://www.w3.org/2005/SMIL21/Language">
+<seq>
+<switch>
+	<video src="http://pmdvod.nationalgeographic.com/NG_Magazine/526/623/Rising_Seas-Cover-iPad-FINAL_ipad-1640-4x3.mp4" system-bitrate="1633879" height="768" width="1024"/>
+	<video src="http://pmdvod.nationalgeographic.com/NG_Magazine/526/623/Rising_Seas-Cover-iPad-FINAL_ipad-1240-4x3.mp4" system-bitrate="1224095" height="648" width="864"/>
+	<video src="http://pmdvod.nationalgeographic.com/NG_Magazine/526/623/Rising_Seas-Cover-iPad-FINAL_ipad-840-4x3.mp4" system-bitrate="821816" height="480" width="640"/>
+	<ref src="http://pmdvod.nationalgeographic.com/NG_Magazine/526/623/Rising_Seas-Cover-iPad-FINAL_ipad-1240-4x3.mp4" title="Rising Seas-Cover-iPad-FINAL" dur="18018ms" guid="49DE78CE-BDA6-9A2C-6308-12F3D373013B" type="video/mp4" height="648" width="864">
+	</ref>
+</switch>
+</seq>
+</smil>

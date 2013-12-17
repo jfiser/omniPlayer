@@ -1,0 +1,82 @@
+<html>
+<head>
+
+<title>ngPlayer</title>
+
+<script type="text/javascript" src="swfobject2.js"></script>
+<script  type="text/css">
+#ngPlayer
+{
+    width:50%;
+}
+
+</script>
+
+
+</head>
+<body>
+    
+    
+<div id="ngPlayer"></div>
+
+
+
+<script type="text/javascript">
+//DDM.video.player.adStart
+var DDM = new Object();
+DDM.video = new Object();
+DDM.video.player = new Object();
+
+DDM.video.player.adStart = function(refId){
+	alert("adStart: " + refId);
+};
+DDM.video.player.adEnded = function(refId){
+	alert("adEnded: " + refId);
+};
+DDM.video.player.clipStart = function(refId){
+	alert("clipStart: " + refId);
+};
+DDM.video.player.clipEnded = function(refId){
+	alert("clipEnded: " + refId);
+};
+DDM.video.player.loadStart = function(refId){
+	alert("loadStart: " + refId);
+};
+DDM.video.player.paused = function(refId){
+	alert("paused: " + refId);
+};
+DDM.video.player.playing = function(refId){
+	alert("playing: " + refId);
+};
+DDM.video.player.seeked = function(refId, time){
+	alert("seeked: " + refId + " : " + time);
+};
+DDM.video.player.seeking = function(refId){
+	alert("seeking: " + refId);
+};
+
+var videoJson = 
+{
+    "byline_override":"",
+    "id":154,
+    "meta_description":"",
+    "mp4_url":"http://ngs-vh.akamaihd.net/z/NG_Magazine/525/647/Rising Seas-Cover-iPhone-FINAL_ipad-1600-2x3.mp4",
+    "playlist_url":"http://link.theplatform.com/s/ngs/XHymmV9hPjgk?mbr=true&feed=all-ng-magazine",
+    "poly_url":"/videos/rising-seas-cover-iphone-final/",
+    "primary_photo":"http://ngm-qa-media.nationalgeographic.com/media/uploads/photos/content/video/2013/09/12/Rising%20Seas-Cover-iPhone-FINAL.jpg",
+    "resource_uri":"/api/v1/video/154/",
+    "slug":"rising-seas-cover-iphone-final",
+    "source":"",
+    "title":"Automation testing video changed"
+};
+
+
+alert((JSON.stringify(videoJson)));
+alert(videoJson);
+
+
+
+</script>
+
+</body>
+</html>
